@@ -1,0 +1,7 @@
+---
+
+- name: Deploy hub services on startup
+  become: yes
+  lineinfile:
+    dest: '/etc/rc.local'
+    line: /home/pi/boom-waffle/deploy/hub/deploy.sh

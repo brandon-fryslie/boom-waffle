@@ -1,0 +1,9 @@
+---
+
+- name: Deploy spoke services on startup
+  become: yes
+  blockinfile:
+    dest: '/etc/rc.local'
+    insertafter: '\/bin\/'  # after /bin/sh or /bin/bash line
+    block: |
+      /home/pi/boom-waffle/deploy/client/deploy.sh

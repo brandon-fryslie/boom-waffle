@@ -36,10 +36,10 @@ ansible_args="-i ${pi_hostname},"
 
 cd $script_path/../ansible
 
-yellow "Running ansible playbook config-raspberry-pi.yml"
-ansible-playbook ${ansible_args} --extra-vars "${extra_vars}" -u pi config-raspberry-pi.yml $ansible_tags_arg
+yellow "Running ansible playbook config-hub.yml"
+ansible-playbook ${ansible_args} --extra-vars "${extra_vars}" -u pi config-hub.yml $ansible_tags_arg
 
-green "Finished running config-raspberry-pi.yml playbook"
+green "Finished running config-hub.yml playbook"
 
 yellow "Rsyncing repo to pi"
 
